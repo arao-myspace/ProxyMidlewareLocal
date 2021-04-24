@@ -1,0 +1,24 @@
+specVersion: '2.2'
+metadata:
+  name: MiddlewareSimpleProxy
+type: application
+framework:
+  name: SAPUI5
+  version: "1.89.0"
+  libraries:
+    - name: sap.m
+    - name: sap.ui.core
+    - name: sap.ui.table
+    - name: themelib_sap_fiori_3
+server:
+  customMiddleware:
+  - name: ui5-middleware-simpleproxy
+    mountPath: /resources/
+    afterMiddleware: compression
+    configuration:
+      baseUri: https://sapui5.hana.ondemand.com/resources/
+  - name: ui5-middleware-simpleproxy
+    mountPath: /Northwind/V2/Northwind/Northwind.svc/
+    afterMiddleware: compression
+    configuration:
+      baseUri: https://services.odata.org/V2/Northwind/Northwind.svc/

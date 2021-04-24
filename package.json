@@ -1,0 +1,31 @@
+{
+  "name": "MiddlewareSimpleProxy",
+  "version": "1.0.0",
+  "description": "https://sapyard.com/ui5-tooling-consume-odata-service-via-ui5-middleware-simpleproxy-2/",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arao-myspace/MiddlewareSimpleProxy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arao-myspace/MiddlewareSimpleProxy/issues"
+  },
+  "homepage": "https://github.com/arao-myspace/MiddlewareSimpleProxy#readme",
+  "dependencies": {
+    "@ui5/cli": "^2.10.3"
+  },
+  "devDependencies": {
+    "ui5-middleware-simpleproxy": "^0.7.1"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-middleware-simpleproxy"
+    ]
+  }
+}
