@@ -1,5 +1,5 @@
 {
-  "name": "MiddlewareSimpleProxy",
+  "name": "middlewaresimpleproxy",
   "version": "1.0.0",
   "description": "https://sapyard.com/ui5-tooling-consume-odata-service-via-ui5-middleware-simpleproxy-2/",
   "main": "index.js",

@@ -7,8 +7,8 @@
 		id="page"
 		title="{i18n>title}">
 		<content>
-		<List id="L1" items="{/Employees}" headerText="Demo List">
-		<StandardListItem title="{FirstName}"/>
+		<List id="L1" items="{/SCARRSet}" headerText="Demo List">
+		<StandardListItem title="{Carrname}"/>
 		</List>
 		</content>
 	</Page>

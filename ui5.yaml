@@ -18,7 +18,7 @@ server:
     configuration:
       baseUri: https://sapui5.hana.ondemand.com/resources/
   - name: ui5-middleware-simpleproxy
-    mountPath: /Northwind/V2/Northwind/Northwind.svc/
+    mountPath: /sap/opu/odata/SAP/ZDEMO_BINDING_SRV/
     afterMiddleware: compression
     configuration:
-      baseUri: https://services.odata.org/V2/Northwind/Northwind.svc/
+      baseUri: http://vhcalnplci:8000/sap/opu/odata/SAP/ZDEMO_BINDING_SRV/

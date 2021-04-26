@@ -18,8 +18,8 @@
 		"resources": "resources.json",
 		"ach": "ach",
 		"dataSources": {
-			"Northwind.svc": {
-				"uri": "/Northwind/V2/Northwind/Northwind.svc/",
+			"NPL": {
+				"uri": "/sap/opu/odata/SAP/ZDEMO_BINDING_SRV/",
 				"type": "OData",
 				"settings": {
 					"localUri": "localService/metadata.xml"
@@ -82,7 +82,7 @@
 					"defaultBindingMode": "OneWay",
 					"defaultCountMode": "Request"
 				},
-				"dataSource": "Northwind.svc",
+				"dataSource": "NPL",
 				"preload": true
 			}
 		},
