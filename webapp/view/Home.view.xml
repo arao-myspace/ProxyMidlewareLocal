@@ -1,15 +1,24 @@
-<mvc:View
-	controllerName="sap.ui.demo.basicTemplate.controller.Home"
-	displayBlock="true"
+<mvc:View controllerName="sap.ui.demo.basicTemplate.controller.Home" displayBlock="true"
 	xmlns="sap.m"
-	xmlns:mvc="sap.ui.core.mvc">
-	<Page
-		id="page"
-		title="{i18n>title}">
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:f="sap.f"
+	xmlns:grid="sap.ui.layout.cssgrid">
+	<Page id="page" title="{i18n>title}">
 		<content>
-		<List id="L1" items="{/SCARRSet}" headerText="Demo List">
-		<StandardListItem title="{Carrname}"/>
-		</List>
+
+			<f:GridList id="gridList" headerText="GridList with mode MultiSelect" mode="None" items="{/SCARRSet}" itemPress="onItemPress" selectionChange="onSelectionChange" class="sapUiResponsiveContentPadding">
+				<f:customLayout>
+					<grid:GridBasicLayout gridTemplateColumns="repeat(auto-fit, minmax(16rem, 1fr))" gridGap="0.5rem" />
+				</f:customLayout>
+
+				<f:GridListItem detailPress="onDetailPress" press="onPress" type="Active">
+					<VBox class="sapUiTinyMargin">
+						<Title text="{Carrid}" wrapping="true"/>
+						<Label text="{Carrname}" wrapping="true" />
+						<Link text="{Url}" target="_blank" href="{Url}" />
+					</VBox>
+				</f:GridListItem>
+			</f:GridList>
 		</content>
 	</Page>
 </mvc:View>
