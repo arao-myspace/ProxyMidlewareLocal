@@ -1,7 +1,7 @@
 <core:FragmentDefinition xmlns="sap.m"
 	xmlns:core="sap.ui.core">
 	<Popover id="myPopover" title="{i18n>PopoverTitle}" class="sapUiResponsivePadding--header sapUiResponsivePadding--footer" placement="Auto">
-		<List items="{/SpfliSet}">
+		<List id="FlightConnections" items="{/SpfliSet}" updateFinished="onUpdateFinished" noDataText="{i18n>EmptyConnectionsList}">
 			<ObjectListItem title="{Carrid}" type="Active" press="onObjectListItemPress" number="{Connid}">
 				<firstStatus>
 					<ObjectStatus text="From {Countryfr} to {Countryto}"/>

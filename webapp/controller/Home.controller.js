@@ -1,8 +1,10 @@
 sap.ui.define([
 	"sap/ui/core/mvc/Controller",
 	"../model/formatter",
-	"sap/ui/core/Fragment"
-], function (Controller, formatter, Fragment) {
+	"sap/ui/core/Fragment",
+	"sap/ui/model/Filter",
+	"sap/ui/model/FilterOperator"
+], function (Controller, formatter, Fragment, Filter, FilterOperator) {
 	"use strict";
 
 	return Controller.extend("sap.ui.demo.basicTemplate.controller.App", {
@@ -10,31 +12,41 @@ sap.ui.define([
 		formatter: formatter,
 
 		onInit: function () {
-
-		},
-
-		onItemPress: function (oEvent) {
-			var oSource = oEvent.getParameter("listItem");
 			var oView = this.getView();
-
 			// create popover
 			if (!this._pPopover) {
 				this._pPopover = Fragment.load({
-					id: oView.getId(),
+					id: this.getView().getId(),
 					name: "sap.ui.demo.basicTemplate.view.Popover",
 					controller: this
 				}).then(function (oPopover) {
 					oView.addDependent(oPopover);
-					// oPopover.bindElement("/ProductCollection/0");
-					return oPopover;
+					return this.oPopover;
 				});
 			}
-			this._pPopover.then(function (oPopover) {
-				oPopover.openBy(oSource);
-			});
+		},
+
+		onItemPress: function (oEvent) {
+			var oListItem = oEvent.getParameter("listItem");
+			this.byId("myPopover").openBy(oListItem);
+			// build filter array
+			this.aFilter = [];
+			var sPath = oListItem.getBindingContextPath();
+
+			var sQuery = sPath.split("('").pop().split("')")[0]; //getting the key value from gridlist item
+			if (sQuery) {
+				this.aFilter.push(new Filter("Carrid", FilterOperator.EQ, sQuery));
+			}
 		},
 		onPopoverClose: function () {
 			this.byId("myPopover").close();
+		},
+		onUpdateFinished: function () 
+		{	
+			var oList = this.byId("FlightConnections");
+			// filter binding
+			var oBinding = oList.getBinding("items");
+			oBinding.filter(this.aFilter);
 		}
 	});
 });

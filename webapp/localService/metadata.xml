@@ -1,0 +1,40 @@
+<edmx:Edmx xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+    xmlns:sap="http://www.sap.com/Protocols/SAPData"
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema xml:lang="en"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" sap:schema-version="1" Namespace="ZDEMO_BINDING_SRV">
+            <EntityType sap:content-version="1" Name="SCARR">
+                <Key>
+                    <PropertyRef Name="Carrid"/>
+                </Key>
+                <Property Name="Carrid" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Airline" sap:unicode="false" MaxLength="3" Nullable="false" Type="Edm.String"/>
+                <Property Name="Carrname" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Airline" sap:unicode="false" MaxLength="20" Nullable="false" Type="Edm.String"/>
+                <Property Name="Currcode" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Airline Currency" sap:unicode="false" MaxLength="5" Nullable="false" Type="Edm.String" sap:semantics="currency-code"/>
+                <Property Name="Url" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="URL" sap:unicode="false" MaxLength="255" Nullable="false" Type="Edm.String"/>
+            </EntityType>
+            <EntityType sap:content-version="1" Name="Spfli">
+                <Key>
+                    <PropertyRef Name="Carrid"/>
+                    <PropertyRef Name="Connid"/>
+                </Key>
+                <Property Name="Carrid" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Airline" sap:unicode="false" MaxLength="3" Nullable="false" Type="Edm.String"/>
+                <Property Name="Connid" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Flight Number" sap:unicode="false" MaxLength="4" Nullable="false" Type="Edm.String"/>
+                <Property Name="Countryfr" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Country" sap:unicode="false" MaxLength="3" Type="Edm.String"/>
+                <Property Name="Cityfrom" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Depart.city" sap:unicode="false" MaxLength="20" Type="Edm.String"/>
+                <Property Name="Airpfrom" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Dep. airport" sap:unicode="false" MaxLength="3" Type="Edm.String"/>
+                <Property Name="Countryto" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Country" sap:unicode="false" MaxLength="3" Type="Edm.String"/>
+                <Property Name="Cityto" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Arrival city" sap:unicode="false" MaxLength="20" Type="Edm.String"/>
+                <Property Name="Airpto" sap:filterable="false" sap:sortable="false" sap:updatable="false" sap:creatable="false" sap:label="Dest. airport" sap:unicode="false" MaxLength="3" Type="Edm.String"/>
+            </EntityType>
+            <EntityContainer Name="ZDEMO_BINDING_SRV_Entities" sap:supported-formats="atom json xlsx" m:IsDefaultEntityContainer="true">
+                <EntitySet sap:content-version="1" Name="SCARRSet" sap:updatable="false" sap:creatable="false" sap:pageable="false" sap:deletable="false" EntityType="ZDEMO_BINDING_SRV.SCARR"/>
+                <EntitySet sap:content-version="1" Name="SpfliSet" sap:updatable="false" sap:creatable="false" sap:pageable="false" sap:deletable="false" EntityType="ZDEMO_BINDING_SRV.Spfli"/>
+            </EntityContainer>
+            <atom:link rel="self" href="http://vhcalnplci:8000/sap/opu/odata/sap/ZDEMO_BINDING_SRV/$metadata"
+                xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://vhcalnplci:8000/sap/opu/odata/sap/ZDEMO_BINDING_SRV/$metadata"
+                xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
