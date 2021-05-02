@@ -21,7 +21,7 @@ sap.ui.define([
 					controller: this
 				}).then(function (oPopover) {
 					oView.addDependent(oPopover);
-					return this.oPopover;
+					return oPopover;
 				});
 			}
 		},
@@ -47,6 +47,13 @@ sap.ui.define([
 			// filter binding
 			var oBinding = oList.getBinding("items");
 			oBinding.filter(this.aFilter);
+		},
+		onObjectListItemPress: function (oEvent) {
+			var oItem = oEvent.getSource();
+			var oRouter = this.getOwnerComponent().getRouter();
+			oRouter.navTo("details", {
+				Path: window.encodeURIComponent(oItem.getBindingContext().getPath().substr(1))
+			});
 		}
 	});
 });

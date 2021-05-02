@@ -6,7 +6,7 @@
 	<Page id="page" title="{i18n>title}">
 		<content>
 
-			<f:GridList id="gridList" headerText="GridList with mode MultiSelect" mode="None" items="{/SCARRSet}" itemPress="onItemPress" selectionChange="onSelectionChange" class="sapUiResponsiveContentPadding">
+			<f:GridList id="gridList" headerText="{i18n>GridListHeader}" mode="None" items="{/SCARRSet}" itemPress="onItemPress" selectionChange="onSelectionChange" class="sapUiResponsiveContentPadding">
 				<f:customLayout>
 					<grid:GridBasicLayout gridTemplateColumns="repeat(auto-fit, minmax(16rem, 1fr))" gridGap="0.5rem" />
 				</f:customLayout>

@@ -105,6 +105,11 @@
 					"pattern": "",
 					"name": "home",
 					"target": ["home"]
+				},
+				{
+				  "pattern": "details/{Path}",
+				  "name": "details",
+				  "target": "details"
 				}
 			],
 			"targets": {
@@ -113,6 +118,10 @@
 					"viewId": "home",
 					"viewLevel": 1,
 					"title": "{i18n>title}"
+				},
+				"details": {
+				  "viewId": "details",
+				  "viewName": "Details"
 				}
 			}
 		}

@@ -1,0 +1,24 @@
+<mvc:View controllerName="sap.ui.demo.basicTemplate.controller.Details" displayBlock="true"
+	xmlns:m="sap.m"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.ui.table">
+	<m:Page id="pageDetails" title="{i18n>titleDetails}" showNavButton="true" navButtonPress="onBackToHome">
+		<m:content>
+			<Table id="tableDetails" selectionMode="MultiToggle" visibleRowCount="7" paste="onPaste" ariaLabelledBy="title">
+				<extension>
+					<!-- <m:OverflowToolbar style="Clear">
+						<m:Title id="title" text="{i18n>BookingsTableTitle}"/>
+					</m:OverflowToolbar> -->
+				</extension>
+				<columns>
+					<Column width="11rem">
+						<m:Label text="Carrier ID" />
+						<template>
+							<m:Text text="{Carrid}" wrapping="false" />
+						</template>
+					</Column>
+				</columns>
+			</Table>
+		</m:content>
+	</m:Page>
+</mvc:View>

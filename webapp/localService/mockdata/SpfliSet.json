@@ -1,0 +1,262 @@
+[
+      {
+        "Carrid" : "AA",
+        "Connid" : "0017",
+        "Countryfr" : "US",
+        "Cityfrom" : "NEW YORK",
+        "Airpfrom" : "JFK",
+        "Countryto" : "US",
+        "Cityto" : "SAN FRANCISCO",
+        "Airpto" : "SFO"
+      },
+      {
+        "Carrid" : "AA",
+        "Connid" : "0064",
+        "Countryfr" : "US",
+        "Cityfrom" : "SAN FRANCISCO",
+        "Airpfrom" : "SFO",
+        "Countryto" : "US",
+        "Cityto" : "NEW YORK",
+        "Airpto" : "JFK"
+      },
+      {
+        "Carrid" : "AZ",
+        "Connid" : "0555",
+        "Countryfr" : "IT",
+        "Cityfrom" : "ROME",
+        "Airpfrom" : "FCO",
+        "Countryto" : "DE",
+        "Cityto" : "FRANKFURT",
+        "Airpto" : "FRA"
+      },
+      {
+        "Carrid" : "AZ",
+        "Connid" : "0788",
+        "Countryfr" : "IT",
+        "Cityfrom" : "ROME",
+        "Airpfrom" : "FCO",
+        "Countryto" : "JP",
+        "Cityto" : "TOKYO",
+        "Airpto" : "TYO"
+      },
+      {
+        "Carrid" : "AZ",
+        "Connid" : "0789",
+        "Countryfr" : "JP",
+        "Cityfrom" : "TOKYO",
+        "Airpfrom" : "TYO",
+        "Countryto" : "IT",
+        "Cityto" : "ROME",
+        "Airpto" : "FCO"
+      },
+      {
+        "Carrid" : "AZ",
+        "Connid" : "0790",
+        "Countryfr" : "IT",
+        "Cityfrom" : "ROME",
+        "Airpfrom" : "FCO",
+        "Countryto" : "JP",
+        "Cityto" : "OSAKA",
+        "Airpto" : "KIX"
+      },
+      {
+        "Carrid" : "DL",
+        "Connid" : "0106",
+        "Countryfr" : "US",
+        "Cityfrom" : "NEW YORK",
+        "Airpfrom" : "JFK",
+        "Countryto" : "DE",
+        "Cityto" : "FRANKFURT",
+        "Airpto" : "FRA"
+      },
+      {
+        "Carrid" : "DL",
+        "Connid" : "1699",
+        "Countryfr" : "US",
+        "Cityfrom" : "NEW YORK",
+        "Airpfrom" : "JFK",
+        "Countryto" : "US",
+        "Cityto" : "SAN FRANCISCO",
+        "Airpto" : "SFO"
+      },
+      {
+        "Carrid" : "DL",
+        "Connid" : "1984",
+        "Countryfr" : "US",
+        "Cityfrom" : "SAN FRANCISCO",
+        "Airpfrom" : "SFO",
+        "Countryto" : "US",
+        "Cityto" : "NEW YORK",
+        "Airpto" : "JFK"
+      },
+      {
+        "Carrid" : "JL",
+        "Connid" : "0407",
+        "Countryfr" : "JP",
+        "Cityfrom" : "TOKYO",
+        "Airpfrom" : "NRT",
+        "Countryto" : "DE",
+        "Cityto" : "FRANKFURT",
+        "Airpto" : "FRA"
+      },
+      {
+        "Carrid" : "JL",
+        "Connid" : "0408",
+        "Countryfr" : "DE",
+        "Cityfrom" : "FRANKFURT",
+        "Airpfrom" : "FRA",
+        "Countryto" : "JP",
+        "Cityto" : "TOKYO",
+        "Airpto" : "NRT"
+      },
+      {
+        "Carrid" : "LH",
+        "Connid" : "0400",
+        "Countryfr" : "DE",
+        "Cityfrom" : "FRANKFURT",
+        "Airpfrom" : "FRA",
+        "Countryto" : "US",
+        "Cityto" : "NEW YORK",
+        "Airpto" : "JFK"
+      },
+      {
+        "Carrid" : "LH",
+        "Connid" : "0401",
+        "Countryfr" : "US",
+        "Cityfrom" : "NEW YORK",
+        "Airpfrom" : "JFK",
+        "Countryto" : "DE",
+        "Cityto" : "FRANKFURT",
+        "Airpto" : "FRA"
+      },
+      {
+        "Carrid" : "LH",
+        "Connid" : "0402",
+        "Countryfr" : "DE",
+        "Cityfrom" : "FRANKFURT",
+        "Airpfrom" : "FRA",
+        "Countryto" : "US",
+        "Cityto" : "NEW YORK",
+        "Airpto" : "JFK"
+      },
+      {
+        "Carrid" : "LH",
+        "Connid" : "2402",
+        "Countryfr" : "DE",
+        "Cityfrom" : "FRANKFURT",
+        "Airpfrom" : "FRA",
+        "Countryto" : "DE",
+        "Cityto" : "BERLIN",
+        "Airpto" : "SXF"
+      },
+      {
+        "Carrid" : "LH",
+        "Connid" : "2407",
+        "Countryfr" : "DE",
+        "Cityfrom" : "BERLIN",
+        "Airpfrom" : "TXL",
+        "Countryto" : "DE",
+        "Cityto" : "FRANKFURT",
+        "Airpto" : "FRA"
+      },
+      {
+        "Carrid" : "QF",
+        "Connid" : "0005",
+        "Countryfr" : "SG",
+        "Cityfrom" : "SINGAPORE",
+        "Airpfrom" : "SIN",
+        "Countryto" : "DE",
+        "Cityto" : "FRANKFURT",
+        "Airpto" : "FRA"
+      },
+      {
+        "Carrid" : "QF",
+        "Connid" : "0006",
+        "Countryfr" : "DE",
+        "Cityfrom" : "FRANKFURT",
+        "Airpfrom" : "FRA",
+        "Countryto" : "SG",
+        "Cityto" : "SINGAPORE",
+        "Airpto" : "SIN"
+      },
+      {
+        "Carrid" : "SQ",
+        "Connid" : "0002",
+        "Countryfr" : "SG",
+        "Cityfrom" : "SINGAPORE",
+        "Airpfrom" : "SIN",
+        "Countryto" : "US",
+        "Cityto" : "SAN FRANCISCO",
+        "Airpto" : "SFO"
+      },
+      {
+        "Carrid" : "SQ",
+        "Connid" : "0015",
+        "Countryfr" : "US",
+        "Cityfrom" : "SAN FRANCISCO",
+        "Airpfrom" : "SFO",
+        "Countryto" : "SG",
+        "Cityto" : "SINGAPORE",
+        "Airpto" : "SIN"
+      },
+      {
+        "Carrid" : "SQ",
+        "Connid" : "0158",
+        "Countryfr" : "SG",
+        "Cityfrom" : "SINGAPORE",
+        "Airpfrom" : "SIN",
+        "Countryto" : "ID",
+        "Cityto" : "JAKARTA",
+        "Airpto" : "JKT"
+      },
+      {
+        "Carrid" : "SQ",
+        "Connid" : "0988",
+        "Countryfr" : "SG",
+        "Cityfrom" : "SINGAPORE",
+        "Airpfrom" : "SIN",
+        "Countryto" : "JP",
+        "Cityto" : "TOKYO",
+        "Airpto" : "TYO"
+      },
+      {
+        "Carrid" : "UA",
+        "Connid" : "0941",
+        "Countryfr" : "DE",
+        "Cityfrom" : "FRANKFURT",
+        "Airpfrom" : "FRA",
+        "Countryto" : "US",
+        "Cityto" : "SAN FRANCISCO",
+        "Airpto" : "SFO"
+      },
+      {
+        "Carrid" : "UA",
+        "Connid" : "3504",
+        "Countryfr" : "US",
+        "Cityfrom" : "SAN FRANCISCO",
+        "Airpfrom" : "SFO",
+        "Countryto" : "DE",
+        "Cityto" : "FRANKFURT",
+        "Airpto" : "FRA"
+      },
+      {
+        "Carrid" : "UA",
+        "Connid" : "3516",
+        "Countryfr" : "US",
+        "Cityfrom" : "NEW YORK",
+        "Airpfrom" : "JFK",
+        "Countryto" : "DE",
+        "Cityto" : "FRANKFURT",
+        "Airpto" : "FRA"
+      },
+      {
+        "Carrid" : "UA",
+        "Connid" : "3517",
+        "Countryfr" : "DE",
+        "Cityfrom" : "FRANKFURT",
+        "Airpfrom" : "FRA",
+        "Countryto" : "US",
+        "Cityto" : "NEW YORK",
+        "Airpto" : "JFK"
+      }
+    ]
