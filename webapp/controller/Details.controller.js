@@ -4,7 +4,7 @@ sap.ui.define([
 ], function(Controller, formatter) {
     'use strict';
 
-    return Controller.extend("sap.ui.demo.basicTemplate.controller.App", {
+    return Controller.extend("sap.ui.demo.basicTemplate.controller.Details", {
 
 		formatter: formatter,
 
@@ -13,14 +13,19 @@ sap.ui.define([
 			oRouter.getRoute("details").attachPatternMatched(this._onObjectMatched, this);
         },
         _onObjectMatched: function (oEvent) {
-			this.getView().byId("tableDetails").bindElement("rows", {
-				path: "/" + window.decodeURIComponent(oEvent.getParameter("arguments").Path) + "SpfliToSbookNav"
-			});
+             var sPath = window.decodeURIComponent(oEvent.getParameter("arguments").Path);
+              var oTable = this.getView().byId("tableDetails");
+              oTable.bindAggregation("items", {
+                 path: "/" + sPath + "/SpfliToSbookNav",
+                 template: this.byId("colListItemTempl"),
+                 templateSherable: false
+                 });
 		},
-
         onBackToHome: function (oEvent) {
             var oRouter = this.getOwnerComponent().getRouter();
 			oRouter.navTo("home");
+            this.getView().byId("tableDetails").unbindItems();
+            var templ = this.byId("colListItemTempl")
         }
     })
     });

@@ -1,24 +1,59 @@
-<mvc:View controllerName="sap.ui.demo.basicTemplate.controller.Details" displayBlock="true"
-	xmlns:m="sap.m"
+<mvc:View
+	controllerName="sap.ui.demo.basicTemplate.controller.Details"
+	displayBlock="true"
+	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns="sap.ui.table">
-	<m:Page id="pageDetails" title="{i18n>titleDetails}" showNavButton="true" navButtonPress="onBackToHome">
-		<m:content>
-			<Table id="tableDetails" selectionMode="MultiToggle" visibleRowCount="7" paste="onPaste" ariaLabelledBy="title">
-				<extension>
-					<!-- <m:OverflowToolbar style="Clear">
-						<m:Title id="title" text="{i18n>BookingsTableTitle}"/>
-					</m:OverflowToolbar> -->
-				</extension>
+>
+	<Page
+		id="pageDetails"
+		title="{i18n>titleDetails}"
+		showNavButton="true"
+		navButtonPress="onBackToHome"
+	>
+		<content>
+			<Table id="tableDetails">
 				<columns>
-					<Column width="11rem">
-						<m:Label text="Carrier ID" />
-						<template>
-							<m:Text text="{Carrid}" wrapping="false" />
-						</template>
+					<Column>
+						<Label text="Carrier ID"/>
+					</Column>
+					<Column>
+						<Label text="Connection ID"/>
+					</Column>
+					<Column>
+						<Label text="Price"/>
+					</Column>
+					<Column>
+						<Label text="Invoice"/>
 					</Column>
 				</columns>
+				<items>
+					<ColumnListItem id="colListItemTempl">
+						<cells>
+							<Text text="{Carrid}"/>
+							<Text text="{Connid}"/>
+							<ObjectNumber
+								inverted="true"
+								number="{
+								parts:[{path:'Forcuram'},{path:'Forcurkey'}],
+								type: 'sap.ui.model.type.Currency',
+								formatOptions: {showMeasure: false}
+							}"
+								unit="{Forcurkey}"
+								state="Information"
+							/>
+							<Switch
+								type="AcceptReject"
+								state="{Invoice}"
+								enabled="false"
+							>
+								<layoutData>
+									<FlexItemData growFactor="1"/>
+								</layoutData>
+							</Switch>
+						</cells>
+					</ColumnListItem>
+				</items>
 			</Table>
-		</m:content>
-	</m:Page>
+		</content>
+	</Page>
 </mvc:View>
