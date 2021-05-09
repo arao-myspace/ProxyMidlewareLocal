@@ -27,7 +27,6 @@ sap.ui.define([
             var oRouter = this.getOwnerComponent().getRouter();
 			oRouter.navTo("home");
             this.getView().byId("tableDetails").unbindItems();
-            var templ = this.byId("colListItemTempl")
         },
         onDetailPress: function (oEvent) {
 			var oItem = oEvent.getSource();

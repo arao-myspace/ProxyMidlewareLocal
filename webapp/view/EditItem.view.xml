@@ -34,17 +34,25 @@
 				>
 					<f:content>
 						<Label text="Carrier ID"/>
-						<Input value="{Carrid}"/>
+						<Input value="{Carrid}" enabled="false"/>
 						<Label text="Connection ID"/>
-						<Input value="{Connid}"/>
+						<Input value="{Connid}" enabled="false"/>
                         <Label text="Booking number"/>
-						<Input value="{Bookid}"/>
+						<Input value="{Bookid}" enabled="false"/>
 						<Label text="Passenger name"/>
-						<Input
-							value="{Passname}"/>
+						<Input value="{Passname}"/>
+						<Label text="Smoker"/>
+						<CheckBox selected="{Smoker}"/>
 					</f:content>
 				</f:SimpleForm>
 			</VBox>
 		</content>
+		<footer>
+		<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button text="Save" type="Emphasized" press='onSave'/>
+				<Button text="Discard" type="Reject" press='onNavBackToDetails'/>
+			</OverflowToolbar>
+		</footer>
 	</Page>
 </mvc:View>
