@@ -26,8 +26,8 @@
 						<Label text="Invoice"/>
 					</Column>
 				</columns>
-				<items>
-					<ColumnListItem id="colListItemTempl">
+				<dependents>
+					<ColumnListItem id="colListItemTempl" type="Active" press='onDetailPress'>
 						<cells>
 							<Text text="{Carrid}"/>
 							<Text text="{Connid}"/>
@@ -51,8 +51,8 @@
 								</layoutData>
 							</Switch>
 						</cells>
-					</ColumnListItem>
-				</items>
+					</ColumnListItem>		
+				</dependents>
 			</Table>
 		</content>
 	</Page>

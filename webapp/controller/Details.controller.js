@@ -15,6 +15,8 @@ sap.ui.define([
         _onObjectMatched: function (oEvent) {
              var sPath = window.decodeURIComponent(oEvent.getParameter("arguments").Path);
               var oTable = this.getView().byId("tableDetails");
+            //   var oBindingInfo = oTable.getBindingInfo("items");
+            //   var oTemplate = 
               oTable.bindAggregation("items", {
                  path: "/" + sPath + "/SpfliToSbookNav",
                  template: this.byId("colListItemTempl"),
@@ -26,6 +28,14 @@ sap.ui.define([
 			oRouter.navTo("home");
             this.getView().byId("tableDetails").unbindItems();
             var templ = this.byId("colListItemTempl")
+        },
+        onDetailPress: function (oEvent) {
+			var oItem = oEvent.getSource();
+			var oRouter = this.getOwnerComponent().getRouter();
+			oRouter.navTo("edit", {
+				Path: window.encodeURIComponent(oItem.getBindingContext().getPath().substr(1))
+			});
+
         }
     })
     });

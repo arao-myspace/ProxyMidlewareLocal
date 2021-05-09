@@ -110,6 +110,11 @@
 				  "pattern": "details/{Path}",
 				  "name": "details",
 				  "target": "details"
+				},
+				{
+					"pattern": "edit/{Path}",
+					"name": "edit",
+					"target": "edit"
 				}
 			],
 			"targets": {
@@ -122,6 +127,10 @@
 				"details": {
 				  "viewId": "details",
 				  "viewName": "Details"
+				},
+				"edit": {
+					"viewId": "edit",
+					"viewName": "EditItem"
 				}
 			}
 		}

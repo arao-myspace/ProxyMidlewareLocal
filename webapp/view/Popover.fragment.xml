@@ -6,7 +6,7 @@
 				<firstStatus>
 					<ObjectStatus text="From {Countryfr} to {Countryto}"/>
 				</firstStatus>
-				<ObjectAttribute text="From {Cityfrom} to {Cityto}" />
+				<ObjectAttribute text="From {Cityfrom} to {Cityto}"/>
 			</ObjectListItem>
 		</List>
 		<!-- <footer>
