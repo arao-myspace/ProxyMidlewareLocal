@@ -1,54 +1,29 @@
-<mvc:View
-	controllerName="sap.ui.demo.basicTemplate.controller.EditItem"
+<mvc:View controllerName="sap.ui.demo.basicTemplate.controller.EditItem"
 	xmlns:mvc="sap.ui.core.mvc"
 	xmlns="sap.m"
-	xmlns:f="sap.ui.layout.form"
-	displayBlock="true"
-	height="100%"
-	busyIndicatorDelay="0"
->
-	<Page
-		id="pageEditItem"
-		title="{i18n>EditItemPageTitle}"
-	>
+	xmlns:f="sap.ui.layout.form" displayBlock="true" height="100%" busyIndicatorDelay="0">
+	<Page id="pageEditItem" title="{i18n>EditItemPageTitle}">
 		<content>
 			<VBox class="sapUiSmallMargin">
-				<f:SimpleForm
-					id="SimpleFormToolbar"
-					editable="true"
-					layout="ResponsiveGridLayout"
-					labelSpanXL="4"
-					labelSpanL="3"
-					labelSpanM="4"
-					labelSpanS="12"
-					adjustLabelSpan="false"
-					emptySpanXL="0"
-					emptySpanL="4"
-					emptySpanM="0"
-					emptySpanS="0"
-					columnsXL="2"
-					columnsL="1"
-					columnsM="1"
-					singleContainerFullSize="false"
-					ariaLabelledBy="Title1"
-				>
+				<f:SimpleForm id="SimpleFormToolbar" editable="true" layout="ResponsiveGridLayout" labelSpanXL="4" labelSpanL="3" labelSpanM="4" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="0" emptySpanL="4" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="1" columnsM="1" singleContainerFullSize="false" ariaLabelledBy="Title1">
 					<f:content>
 						<Label text="Carrier ID"/>
-						<Input value="{Carrid}" enabled="false"/>
+						<Input id="Carrid" value="{Carrid}" enabled="false"/>
 						<Label text="Connection ID"/>
-						<Input value="{Connid}" enabled="false"/>
-                        <Label text="Booking number"/>
-						<Input value="{Bookid}" enabled="false"/>
+						<Input id="Connid" value="{Connid}" enabled="false"/>
+						<Label text="Booking number"/>
+						<Input id="Bookid" value="{Bookid}" enabled="false"/>
 						<Label text="Passenger name"/>
-						<Input value="{Passname}"/>
+						<Input id="Passname" value="{Passname}" required="true"/>
 						<Label text="Smoker"/>
-						<CheckBox selected="{Smoker}"/>
+						<CheckBox id="Smoker" selected="{Smoker}"/>
 					</f:content>
 				</f:SimpleForm>
 			</VBox>
 		</content>
 		<footer>
-		<OverflowToolbar>
+			<OverflowToolbar>
+				<Button icon="sap-icon://alert" text="{= ${message>/}.length }" visible="{= ${message>/}.length > 0 }" type="Emphasized" press='.onMessagePopoverPress'/>
 				<ToolbarSpacer/>
 				<Button text="Save" type="Emphasized" press='onSave'/>
 				<Button text="Discard" type="Reject" press='onNavBackToDetails'/>
