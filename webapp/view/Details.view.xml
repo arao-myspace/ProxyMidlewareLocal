@@ -11,26 +11,40 @@
 		navButtonPress="onBackToHome"
 	>
 		<content>
-			<Table id="tableDetails">
+<IconTabBar
+		id="idIconTabBarMulti"
+		expanded="{device>/isNoPhone}"
+		class="sapUiResponsiveContentPadding">
+		<items>
+			<IconTabFilter icon="sap-icon://hint" key="info">
+							<Table id="tableDetails">
 				<columns>
-					<Column>
+					<Column minScreenWidth="Phone">
 						<Label text="Carrier ID"/>
 					</Column>
-					<Column>
+					<Column minScreenWidth="Phone">
 						<Label text="Connection ID"/>
 					</Column>
-					<Column>
+					<Column minScreenWidth="Phone">
+						<Label text="Booking no."/>
+					</Column>
+					<Column minScreenWidth="Tablet">
 						<Label text="Price"/>
 					</Column>
-					<Column>
+					<Column minScreenWidth="Desktop">
 						<Label text="Invoice"/>
 					</Column>
 				</columns>
 				<dependents>
-					<ColumnListItem id="colListItemTempl" type="Active" press='onDetailPress'>
+					<ColumnListItem
+						id="colListItemTempl"
+						type="Active"
+						press="onDetailPress"
+					>
 						<cells>
 							<Text text="{Carrid}"/>
 							<Text text="{Connid}"/>
+							<Text text="{Bookid}"/>
 							<ObjectNumber
 								inverted="true"
 								number="{
@@ -51,9 +65,27 @@
 								</layoutData>
 							</Switch>
 						</cells>
-					</ColumnListItem>		
+					</ColumnListItem>
 				</dependents>
 			</Table>
+			</IconTabFilter>
+			<IconTabFilter
+				icon="sap-icon://attachment"
+				key="attachments"
+				count="3">
+				<Text text="Attachments go here ..." />
+			</IconTabFilter>
+			<IconTabFilter
+				icon="sap-icon://notes"
+				key="notes"
+				count="12">
+				<Text text="Notes go here ..." />
+			</IconTabFilter>
+			<IconTabFilter icon="sap-icon://group" key="people">
+				<Text text="People content goes here ..." />
+			</IconTabFilter>
+		</items>
+	</IconTabBar>
 		</content>
 	</Page>
 </mvc:View>

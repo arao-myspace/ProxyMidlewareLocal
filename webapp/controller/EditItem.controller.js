@@ -11,6 +11,7 @@ sap.ui.define([
 
     var MessageType = library.MessageType;
     var oMessageProcessor = new sap.ui.core.message.ControlMessageProcessor();
+    var oMessageManager = sap.ui.getCore().getMessageManager();
 
     return Controller.extend("sap.ui.demo.basicTemplate.controller.EditItem", {
 
@@ -31,7 +32,7 @@ sap.ui.define([
             var oSimpleform = this.getView().byId("SimpleFormToolbar");
             oSimpleform.bindElement("/" + sPath);
         },
-        _BackToDetails: function (oEvent) {
+        _BackToDetails: function () {
             var sPreviousHash = History.getInstance().getPreviousHash();
 
             if (sPreviousHash !== undefined) {
@@ -44,6 +45,7 @@ sap.ui.define([
             this._BackToDetails();
         },
         onSave: function () {
+            oMessageManager.removeAllMessages();
             var oSimpleform = this.getView().byId("SimpleFormToolbar");
             var sPath = oSimpleform.getBindingContext().sPath;
             var Carrid = this.getView().byId("Carrid").getValue();
@@ -53,14 +55,13 @@ sap.ui.define([
             var sPassname = Passname.getValue();
 
             if (!sPassname) {
-                this.getView().getModel().submitChanges();
                 var oMessage = new Message({
-                    message: "My generated error message",
+                    message: "Proszę wypełnić wszystkie pola obowiązkowe",
                     type: MessageType.Error,
                     target: "Passname/value",
                     processor: oMessageProcessor
                 });
-                sap.ui.getCore().getMessageManager().addMessages(oMessage);
+                oMessageManager.addMessages(oMessage);
                 Passname.setValueState("Error");
                 Passname.setValueStateText("To pole jest wymagane");
                 return undefined;

@@ -9,12 +9,6 @@
 				<ObjectAttribute text="From {Cityfrom} to {Cityto}"/>
 			</ObjectListItem>
 		</List>
-		<!-- <footer>
-			<OverflowToolbar>
-				<ToolbarSpacer/>
-				<Button id="email" text="Email" press=""/>
-			</OverflowToolbar>
-		</footer> -->
 		<endButton>
 			<Button id="PopoverExit" icon="sap-icon://inspect-down" press="onPopoverClose"/>
 		</endButton>

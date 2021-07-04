@@ -28,7 +28,7 @@ sap.ui.define([
 
 		onItemPress: function (oEvent) {
 			var oListItem = oEvent.getParameter("listItem");
-			this.byId("myPopover").openBy(oListItem);
+			this.byId("myPopover").openBy(oListItem);			
 			// build filter array
 			this.aFilter = [];
 			var sPath = oListItem.getBindingContextPath();
