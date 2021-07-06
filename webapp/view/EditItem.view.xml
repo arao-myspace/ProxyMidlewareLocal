@@ -16,7 +16,7 @@
 						<Label text="Passenger name"/>
 						<Input id="Passname" value="{Passname}" required="true"/>
 						<Label text="Smoker"/>
-						<CheckBox id="Smoker" selected="{Smoker}"/>
+						<CheckBox id="Smoker" selected="{path: 'Smoker', formatter: '.formatter.smokerStatus'}"/>
 					</f:content>
 				</f:SimpleForm>
 			</VBox>

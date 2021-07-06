@@ -13,8 +13,8 @@ sap.ui.define([
 			oRouter.getRoute("details").attachPatternMatched(this._onObjectMatched, this);
         },
         _onObjectMatched: function (oEvent) {
-             var sPath = window.decodeURIComponent(oEvent.getParameter("arguments").Path);
-              var oTable = this.getView().byId("tableDetails");
+            var sPath = window.decodeURIComponent(oEvent.getParameter("arguments").Path);
+            var oTable = this.getView().byId("tableDetails");
             //   var oBindingInfo = oTable.getBindingInfo("items");
             //   var oTemplate = 
               oTable.bindAggregation("items", {
@@ -22,6 +22,12 @@ sap.ui.define([
                  template: this.byId("colListItemTempl"),
                  templateSherable: false
                  });
+            var oCalendar = this.byId("calendar1");
+            oCalendar.bindAggregation("specialDates", {
+                path: "/" + sPath + "/SpfliToSbookNav",
+                template: this.byId("specialDate"),
+                templateSherable: false
+            });
 		},
         onBackToHome: function (oEvent) {
             var oRouter = this.getOwnerComponent().getRouter();
