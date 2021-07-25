@@ -1,0 +1,12 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Popover id="calPopover" showHeader="false" contentWidth="320px" contentHeight="500px" placement="Bottom" class="sapUiResponsivePadding--header sapUiResponsivePadding--content sapUiResponsivePadding--footer">
+        <NavContainer id="navCon">
+            <Page id="master" title="Details for {path: 'OrderDate', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'DD.MM.YYYY' }}">
+                <List id="listPop">
+                    <StandardListItem title="{Passname}" description="Date of Flight: {path: 'Fldate', type: 'sap.ui.model.type.DateTime', formatOptions: { pattern: 'DD.MM.YYYY' }}" type="Active" press="onNavToProduct" iconDensityAware="false" iconInset="false" />
+                </List>
+            </Page>
+        </NavContainer>
+    </Popover>
+</core:FragmentDefinition>

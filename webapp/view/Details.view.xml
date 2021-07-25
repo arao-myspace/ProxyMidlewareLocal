@@ -1,27 +1,12 @@
-<mvc:View
-	controllerName="sap.ui.demo.basicTemplate.controller.Details"
-	displayBlock="true"
+<mvc:View controllerName="sap.ui.demo.basicTemplate.controller.Details" displayBlock="true"
 	xmlns="sap.m"
 	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:u="sap.ui.unified"
->
-	<Page
-		id="pageDetails"
-		title="{i18n>titleDetails}"
-		showNavButton="true"
-		navButtonPress="onBackToHome"
-	>
+	xmlns:u="sap.ui.unified">
+	<Page id="pageDetails" title="{i18n>titleDetails}" showNavButton="true" navButtonPress="onBackToHome">
 		<content>
-			<IconTabBar
-				id="idIconTabBarMulti"
-				expanded="{device>/isNoPhone}"
-				class="sapUiResponsiveContentPadding"
-			>
+			<IconTabBar id="idIconTabBarMulti" expanded="{device>/isNoPhone}" class="sapUiResponsiveContentPadding">
 				<items>
-					<IconTabFilter
-						icon="sap-icon://activity-items"
-						key="info"
-					>
+					<IconTabFilter icon="sap-icon://activity-items" key="info">
 						<Table id="tableDetails">
 							<columns>
 								<Column minScreenWidth="Phone">
@@ -41,30 +26,17 @@
 								</Column>
 							</columns>
 							<dependents>
-								<ColumnListItem
-									id="colListItemTempl"
-									type="Active"
-									press="onDetailPress"
-								>
+								<ColumnListItem id="colListItemTempl" type="Active" press="onDetailPress">
 									<cells>
 										<Text text="{Carrid}"/>
 										<Text text="{Connid}"/>
 										<Text text="{Bookid}"/>
-										<ObjectNumber
-											inverted="true"
-											number="{
+										<ObjectNumber inverted="true" number="{
 								parts:[{path:'Forcuram'},{path:'Forcurkey'}],
 								type: 'sap.ui.model.type.Currency',
 								formatOptions: {showMeasure: false}
-							}"
-											unit="{Forcurkey}"
-											state="Information"
-										/>
-										<Switch
-											type="AcceptReject"
-											state="{Invoice}"
-											enabled="false"
-										>
+							}" unit="{Forcurkey}" state="Information" />
+										<Switch type="AcceptReject" state="{Invoice}" enabled="false">
 											<layoutData>
 												<FlexItemData growFactor="1"/>
 											</layoutData>
@@ -74,29 +46,13 @@
 							</dependents>
 						</Table>
 					</IconTabFilter>
-					<IconTabFilter
-						icon="sap-icon://appointment"
-						key="attachments"
-						count="3"
-					>
-						<FlexBox
-							alignItems="Center"
-							justifyContent="Center"
-						>
+					<IconTabFilter icon="sap-icon://appointment" key="attachments" count="3">
+						<FlexBox alignItems="Center" justifyContent="Center">
 							<VBox>
-								<u:Calendar
-									id="calendar1"
-									legend="legend1"
-								>
+								<u:Calendar id="calendar1" legend="legend1" select="handleCalendarSelect">
 									<!-- <u:specialDates> -->
 									<u:dependents>
-										<u:DateTypeRange
-											id="specialDate"
-											startDate="{Fldate}"
-											endDate="{Fldate}"
-											type="{path: 'Class', formatter: '.formatter.getCalendarItemType'}"
-											color="{path: 'Class', formatter: '.formatter.getCalendarItemColor'}"
-										/>
+										<u:DateTypeRange id="specialDate" startDate="{OrderDate}" endDate="{OrderDate}" type="{path: 'Class', formatter: '.formatter.getCalendarItemType'}" color="{path: 'Class', formatter: '.formatter.getCalendarItemColor'}" />
 									</u:dependents>
 									<!-- </u:specialDates> -->
 								</u:Calendar>
@@ -104,11 +60,7 @@
 							</VBox>
 						</FlexBox>
 					</IconTabFilter>
-					<IconTabFilter
-						icon="sap-icon://pie-chart"
-						key="notes"
-						count="12"
-					>
+					<IconTabFilter icon="sap-icon://pie-chart" key="notes" count="12">
 						<Text text="Notes go here ..."/>
 					</IconTabFilter>
 				</items>
